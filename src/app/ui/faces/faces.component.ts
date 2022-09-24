@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { EmployeeModel } from '../../model/employee.model';
 import { EmployeeService } from '../../services/employee.service';
+import {PersonModel} from "../../model/person.model";
 
 @Component({
   selector: 'app-faces',
@@ -11,7 +12,7 @@ import { EmployeeService } from '../../services/employee.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FacesComponent {
-  data$: Observable<EmployeeModel[]> = this._employeeService.getaLL();
-  constructor(private _httpClient: HttpClient, private _employeeService: EmployeeService) {
+  data$: Observable<PersonModel[]> = this._employeeService.getaLL();
+  constructor( private _employeeService: EmployeeService) {
   }
 }
