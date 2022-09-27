@@ -8,21 +8,24 @@ import {FacesComponentModule} from "./ui/faces/faces.component-module";
 import {EmployeeServiceModule} from "./services/employee.service-module";
 import {ProjectListComponentModule} from "./ui/project-list-component/project-list.component-module";
 import {ProjectServiceModule} from "./services/project.service-module";
-import {ProjectListComponent} from "./ui/project-list-component/project-list.component";
+import {EmployeeFormComponentModule} from "./ui/employee-form/employee-form.component-module";
+import {EmployeeFormComponent} from "./ui/employee-form/employee-form.component";
+
 
 @NgModule({
   declarations: [AppComponent],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        EmployeeListComponentModule,
-        EmployeeServiceModule,
-        FacesComponentModule,
-        ProjectListComponentModule,
-        ProjectServiceModule,
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    EmployeeListComponentModule,
+    EmployeeServiceModule,
+    FacesComponentModule,
+    ProjectListComponentModule,
+    ProjectServiceModule,
+    EmployeeFormComponentModule,
 
-    ],
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
