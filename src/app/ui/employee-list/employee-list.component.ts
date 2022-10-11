@@ -1,9 +1,7 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { PersonModel } from '../../model/person.model';
 import { EmployeeService } from '../../services/employee.service';
-import { EmployeeModel } from '../../model/employee.model';
-import {PersonModel} from "../../model/person.model";
 
 @Component({
   selector: 'employee-list',
@@ -14,5 +12,9 @@ import {PersonModel} from "../../model/person.model";
 export class EmployeeListComponent {
   data$: Observable<PersonModel[] | null> = this._employeeService.getaLL();
   constructor(private _employeeService: EmployeeService) {
+  }
+  remove(id: string) {
+    this._employeeService.delete(id).subscribe();
+
   }
 }

@@ -25,7 +25,9 @@ constructor(private _employeeeSrvice: EmployeeService) {
 }
 
   onFormSubmitted(form: CreateEmployeeModel) {
- this._employeeeSrvice.create(form).subscribe();
+    this._employeeeSrvice.create(form).subscribe({
+      complete() {alert ('User was successfully added to databese ' + form.name + form.age + form.salary);
+      }
+    })
   }
-
 }
