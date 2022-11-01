@@ -1,13 +1,25 @@
-
+<div class="position-relative">
+  <div class="position-absolute top-0 start-0"></div>
+  <div class="p-3 mb-2 bg-danger bg-info text-dark bg-opacity-25">
 <form [formGroup]="employeeForm" (ngSubmit)="OnFormSubmitted(employeeForm.value)">
-<input type="text" formControlName="Name" placeholder="Name">
+  <input type="text" formControlName="Name" placeholder="Name">
 <input type="number" formControlName="Age" placeholder="Age">
 <input type="number" formControlName="Salary" placeholder="Salary">
   <input class="btn btn-primary" type="submit" [disabled]="employeeForm.valid" value="Submit">
 </form>
 <li *ngIf="employeeForm.valid">
 Your New Employee is {{employeeForm.value.name}}, age:  {{employeeForm.value.age}} with salary  {{employeeForm.value.salary}} $ will be added to the system
-</li>  <li class="list-group-item list-group-item-primary">
 </li>
-<img src="giphy.gif" alt="gif">
+
+</div></div>
+<  <div class="position-absolute bottom-0 end-0">
+  <div class="card">
+    <h5 class="card-header">My First APP</h5>
+    <div class="card-body">
+      <h5 class="card-title">2022</h5>
+      <p class="card-text"></p>
+      <a href="" class="https://github.com/Merrson1996">Go my github</a>
+    </div>
+  </div>
+</div>
 

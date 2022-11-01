@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { EmployeeListComponentModule } from './ui/employee-list/employee-list.component-module';
 import { EmployeeServiceModule } from './services/employee.service-module';
 import { EmployeeFormComponentModule } from './ui/employee-form/employee-form.component-module';
+import {HomeComponent} from "./ui/home/home.component";
 
-const routes: Routes = [{ path: 'employee-list', component: EmployeeListComponent }, { path: 'create-employee', component: EmployeeFormComponent }, { path: '', component: AppComponent }];
+const routes: Routes = [{ path: 'employee-list', component: EmployeeListComponent }, { path: 'create-employee',
+  component: EmployeeFormComponent }, { path: '', component: HomeComponent } ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), EmployeeListComponentModule, EmployeeServiceModule, EmployeeFormComponentModule],
+  imports: [RouterModule.forRoot(routes), EmployeeListComponentModule, EmployeeServiceModule, EmployeeFormComponentModule,],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

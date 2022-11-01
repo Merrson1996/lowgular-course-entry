@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { HomeComponent } from './home.component';
+import {AppRoutingModule} from "../../app-routing.module";
 
 @NgModule({
-  imports: [],
+    imports: [
+        AppRoutingModule
+    ],
   declarations: [HomeComponent],
   providers: [],
   exports: [HomeComponent]
