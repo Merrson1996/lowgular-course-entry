@@ -2,10 +2,10 @@
   <div class="position-absolute top-0 start-0"></div>
   <div class="p-3 mb-2 bg-danger bg-info text-dark bg-opacity-25">
 <form [formGroup]="employeeForm" (ngSubmit)="OnFormSubmitted(employeeForm.value)">
-  <input type="text" formControlName="Name" placeholder="Name">
-<input type="number" formControlName="Age" placeholder="Age">
-<input type="number" formControlName="Salary" placeholder="Salary">
-  <input class="btn btn-primary" type="submit" [disabled]="employeeForm.valid" value="Submit">
+  <input type="text" formControlName="name" placeholder="Name">
+<input type="number" formControlName="age" placeholder="Age">
+<input type="number" formControlName="salary" placeholder="Salary">
+  <input class="btn btn-primary" type="submit" [disabled]="employeeForm.invalid" value="Submit">
 </form>
 <li *ngIf="employeeForm.valid">
 Your New Employee is {{employeeForm.value.name}}, age:  {{employeeForm.value.age}} with salary  {{employeeForm.value.salary}} $ will be added to the system
